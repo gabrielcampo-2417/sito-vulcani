@@ -93,10 +93,15 @@ nav {
 }
 
 .nav-brand {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
     width: 33.33%;
     color: var(--brand-yellow-flat);
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+.nav-brand:hover {
+    transform: translateY(-4px);
 }
 
 .nav-links {
@@ -104,14 +109,19 @@ nav {
     align-items: center;
     gap: 40px;
     list-style: none;
-    width: 33.33%;
-    justify-content: center;
+    margin-left: auto;
+    justify-content: flex-end;
 }
 
 .nav-links a {
     font-size: 14px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+.nav-links a:hover {
+    transform: translateY(-4px);
 }
 
 .nav-links a.active {
@@ -560,6 +570,7 @@ nav {
 .strip-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     border-top: 1px solid rgba(255, 178, 21, 0.3);
 }
 
@@ -567,11 +578,16 @@ nav {
     position: relative;
     display: block;
     overflow: hidden;
+    transition: transform 0.2s ease;
 }
-
+.strip-item:hover {
+    transform: translateY(-6px);
+}
 .strip-item img {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    height: 200px;
+    aspect-ratio: 16 / 11;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -1035,7 +1051,7 @@ td {
 
 
 .card-section { padding: 0 48px; }
-.card-row { display: grid; grid-template-columns: repeat(3, 1fr); }
+.card-row { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; }
 
 
 .volcano-grid {
@@ -1053,13 +1069,18 @@ td {
     position: relative;
     border-right: 1px solid rgba(255, 178, 21, 0.1);
 }
+.vcard {
+    transition: transform 0.2s ease;
+}
 
+.vcard:hover {
+    transform: translateY(-6px);
+}
 .volcano-grid .volcano-card.border-left { border-left: 1px solid #c98a27; }
 .volcano-grid .volcano-card:first-child { padding-left: 0; }
 .volcano-grid .volcano-card:last-child, .vcard:last-child { padding-right: 0; border-right: none; }
 
 .vcard.hidden { display: none; }
-.vcard { display: block; }
 
 .image-wrapper {
     width: 100%;
@@ -1633,7 +1654,14 @@ footer {
     .item-name {
         margin-left: 20px;
     }
+.arrow-icon {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
 
+tbody tr:hover .arrow-icon {
+    transform: translateX(6px);
+}
 
 
 
