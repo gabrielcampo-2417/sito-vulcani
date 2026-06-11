@@ -100,10 +100,6 @@ nav {
 	display: inline-block;
 }
 
-.nav-brand:hover {
-	transform: translateY(-4px);
-}
-
 .nav-links {
 	display: flex;
 	align-items: center;
@@ -120,11 +116,6 @@ nav {
 	transition: transform 0.2s ease;
 	display: inline-block;
 }
-
-.nav-links a:hover {
-	transform: translateY(-4px);
-}
-
 .nav-links a.active {
 	color: var(--brand-yellow-flat);
 	text-decoration: underline;
@@ -2246,4 +2237,11 @@ footer {
 
 tbody tr:hover .arrow-icon {
 	transform: translateX(6px);
+}
+.nav-brand:hover {
+    color: rgba(255, 178, 21, 0.7);
+}
+
+.nav-links a:hover {
+    color: rgba(255, 178, 21, 0.7);
 }
